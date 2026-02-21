@@ -1,0 +1,13 @@
+# Ignore all binaries in bin/
+bin/*
+
+# But keep the folder structure (optional)
+!bin/.gitkeep
+
+# Ignore massive map data
+data/*
+!data/.gitkeep
+
+# Ignore system/temp files
+*.log
+.DS_Store
