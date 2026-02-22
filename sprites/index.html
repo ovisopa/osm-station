@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Sprite Inspector</h1>
+    <div style="position: relative;">
+        <img src="sprite.png" id="spriteImg" style="border: 1px solid red;">
+        <div id="tooltip" style="position: absolute; background: black; color: white; padding: 5px; display: none; pointer-events: none;"></div>
+    </div>
+
+    <script>
+        // Use fetch to get your JSON data
+        fetch('sprite.json').then(res => res.json()).then(data => {
+            const img = document.getElementById('spriteImg');
+            const tooltip = document.getElementById('tooltip');
+
+            img.onmousemove = (e) => {
+                const rect = img.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Find which icon matches these coordinates
+                const found = Object.entries(data).find(([name, info]) => {
+                    return x >= info.x && x <= (info.x + info.width) &&
+                           y >= info.y && y <= (info.y + info.height);
+                });
+
+		if (found) {
+		    tooltip.style.display = 'block';
+		    
+		    // Position it 20px to the right of the pointer
+		    tooltip.style.left = (e.pageX + 20) + 'px';
+		    
+		    // Keep it vertically aligned with the pointer 
+		    // (Subtracting 10-15px usually centers the text line with the cursor tip)
+		    tooltip.style.top = (e.pageY - 10) + 'px';
+		    
+		    tooltip.innerText = found[0] + " (" + found[1].width + "x" + found[1].height + ")";
+		    
+		    // NEW: Prevent tooltip from wrapping text which can cause jumping
+		    tooltip.style.whiteSpace = 'nowrap'; 
+		} else {
+		    tooltip.style.display = 'none';
+		}
+            };
+        });
+    </script>
+</body>
+</html>

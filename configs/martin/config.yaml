@@ -1,10 +1,14 @@
-# Martin Tile Server Configuration
-unstable: true
 keep_alive: 75
-listen_addresses: "0.0.0.0:3000"
+listen_addresses: '0.0.0.0:3000'
 
-sources:
-  # This tells martin to look for any .pmtiles files in your data folder
-  pmtiles:
-    paths:
-      - /home/ovisopa/osm-station/data
+# We define the sources under the pmtiles header
+pmtiles:
+  sources:
+    osm_data: /home/ovisopa/osm-station/data/romania.pmtiles
+    elevation_lines: /home/ovisopa/osm-station/data/romania_full_contours.pmtiles
+
+static_files:
+  styles: /home/ovisopa/osm-station/styles
+  # Some versions prefer 'fonts' over 'fontstack'
+  fonts: /home/ovisopa/osm-station/assets
+  sprites: /home/ovisopa/osm-station/sprites
