@@ -1,0 +1,15 @@
+# configs/topo.yml
+schema:
+  - id: topo_pois
+    type: point
+    osm:
+      - tags:
+          natural: [spring]
+          man_made: [tower, mast, antenna]
+          waterway: [waterfall]
+          amenity: [drinking_water]
+    mapping:
+      name: name
+      topotype: ["coalesce", ["get", "natural"], ["get", "man_made"], ["get", "amenity"]]
+    minzoom: 10
+    maxzoom: 14

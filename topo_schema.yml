@@ -1,0 +1,16 @@
+schema:
+  id: topo_extra
+  layers:
+    - id: mountain_features
+      description: "Custom layer for mountain navigation"
+      queries:
+        - source: osm  # Crucial: tells it to pull from your .pbf
+          min_zoom: 12
+          max_zoom: 14
+          filter:
+            any:
+              - natural: [spring, cave_entrance]
+              - waterway: waterfall
+              - amenity: shelter
+              - historic: wayside_cross
+              - man_made: [cross, tower, mast, antenna]

@@ -4,7 +4,7 @@ listen_addresses: '0.0.0.0:3000'
 # We define the sources under the pmtiles header
 pmtiles:
   sources:
-    osm_data: /home/ovisopa/osm-station/data/romania.pmtiles
+    osm_data: /home/ovisopa/osm-station/data/romania_final.pmtiles
     elevation_lines: /home/ovisopa/osm-station/data/romania_full_contours.pmtiles
 
 static_files:
