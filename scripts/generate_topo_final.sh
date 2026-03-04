@@ -6,16 +6,11 @@ MEMORY=${2:-48g}
 
 echo "🏔️ Building Romania with FORCED Topo Features..."
 
-java -Xmx$MEMORY -jar bin/planetiler.jar \
+JAR_PATH="/home/ovisopa/osm-station/src/planetiler-openmaptiles/target/planetiler-openmaptiles-3.16.1-SNAPSHOT-with-deps.jar"
+
+java -Xmx48g -jar $JAR_PATH \
   --osm-path=data/$AREA-latest.osm.pbf \
-  --output=data/${AREA}_final.pmtiles \
-  --nodemap-type=sparsearray \
-  --storage=mmap \
+  --output=data/${AREA}_custom_topo.pmtiles \
   --area=$AREA \
   --force \
-  --transportation-z13-paths=true \
-  --extra-name-tags=natural,man_made,waterway,amenity,historic \
-  --include-tags=true \
-  --keep-tags=natural,man_made,waterway,amenity,historic \
-  --all-names=true \
-  --schema=configs/topo.yml
+  --transportation-z13-paths=true
