@@ -1,0 +1,17 @@
+{
+  "options": {
+    "paths": {
+      "root": "/data",
+      "fonts": "/data/assets",
+      "sprites": "/data/sprites",
+      "styles": "/data/styles",
+      "mbtiles": "/data/data"
+    }
+  },
+  "styles": {
+    "trackthewild": {
+      "style": "trackthewild_style.json"
+    }
+  }
+
+}

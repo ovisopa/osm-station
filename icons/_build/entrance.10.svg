@@ -1,3 +1,4 @@
-<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.75 0V2.5H4V1.25H8.75V8.75H4V7.5H2.75V10H10V0H2.75ZM5 2.5V4.25H1V5.75H5V7.5L8 5L5 2.5Z" fill="#B3AAA3"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+<path fill-rule="nonzero" fill="rgb(70.196078%, 66.666667%, 63.921569%)" fill-opacity="1" d="M 5.5 0 L 5.5 5 L 8 5 L 8 2.5 L 17.5 2.5 L 17.5 17.5 L 8 17.5 L 8 15 L 5.5 15 L 5.5 20 L 20 20 L 20 0 Z M 10 5 L 10 8.5 L 2 8.5 L 2 11.5 L 10 11.5 L 10 15 L 16 10 Z M 10 5 "/>
 </svg>

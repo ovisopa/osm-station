@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 15 15">
-  <path d="M0 10L8 10L8 14L0 14L0 10z"/>
-  <path d="M9 11L15 11L15 14L9 14L9 11z"/>
-  <path d="M6 5C6 5 6 3 6 3C6 3 10 3 10 3C10 3 10 1 10 1C10 1 14 4 14 4C14 4 10 7 10 7C10 7 10 5 10 5C10 5 6 5 6 5z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 0 16 L 12.800781 16 L 12.800781 22.398438 L 0 22.398438 Z M 0 16 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 14.398438 17.601562 L 24 17.601562 L 24 22.398438 L 14.398438 22.398438 Z M 14.398438 17.601562 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 9.601562 8 C 9.601562 8 9.601562 4.800781 9.601562 4.800781 C 9.601562 4.800781 16 4.800781 16 4.800781 C 16 4.800781 16 1.601562 16 1.601562 C 16 1.601562 22.398438 6.398438 22.398438 6.398438 C 22.398438 6.398438 16 11.199219 16 11.199219 C 16 11.199219 16 8 16 8 C 16 8 9.601562 8 9.601562 8 Z M 9.601562 8 "/>
 </svg>

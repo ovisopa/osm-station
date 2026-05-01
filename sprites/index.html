@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+    <style>
+        body {
+            /* Set the background image */
+            background-image: url('topographic_3911107.jpg');
+            
+            /* Center and scale the image to cover the entire screen */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            
+            /* Optional: Add a fallback color and set default text color for visibility */
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body >
     <h1>Sprite Inspector</h1>
     <div style="position: relative;">
         <img src="sprite.png" id="spriteImg" style="border: 1px solid red;">
         <div id="tooltip" style="position: absolute; background: black; color: white; padding: 5px; display: none; pointer-events: none;"></div>
     </div>
+<br><br><br><br><br>
 
     <script>
         // Use fetch to get your JSON data

@@ -8,9 +8,11 @@ OUTPUT_DIR="/home/ovisopa/osm-station/sprites"
 rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
 
-cp /home/ovisopa/osm-station/icons/openmaptiles/*.svg "$BUILD_DIR/"
-cp /home/ovisopa/osm-station/icons/temaki/*.svg "$BUILD_DIR/"
+cp /home/ovisopa/osm-station/icons/openmaptiles_resized/*.svg "$BUILD_DIR/"
+cp /home/ovisopa/osm-station/icons/openmaptiles_patterns/*.svg "$BUILD_DIR/"
+cp /home/ovisopa/osm-station/icons/temaki_resized/*.svg "$BUILD_DIR/"
 cp /home/ovisopa/osm-station/icons/osmc/*.svg "$BUILD_DIR/"
+cp /home/ovisopa/osm-station/icons/trackTheWild/*.svg "$BUILD_DIR/"
 
 # 3. Generate Sprites (Note: no .png at the end)
 echo "Building sprites into $OUTPUT_DIR..."

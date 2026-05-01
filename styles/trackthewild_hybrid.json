@@ -1,0 +1,81 @@
+{
+  "version": 8,
+  "glyphs": "https://assets.trackthewild.ro/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://assets.trackthewild.ro/sprites/sprite",
+  "sources": {
+    "satellite-tiles": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
+	  "attribution": "<a href='https://www.esri.com' target='_blank'>Powered by Esri</a> — Sources: Esri, DigitalGlobe, GeoEye, i-cubed, USDA FSA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community"
+    },
+    "labels-tiles": {
+      "type": "raster",
+      "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256
+    },
+    "osm_data": {
+      "type": "vector",
+      "url": "https://maps.trackthewild.ro/osm_data"
+    },
+    "elevation_lines": {
+      "type": "vector",
+      "url": "https://maps.trackthewild.ro/elevation_lines"
+    }
+  },
+  "layers": [
+    { "id": "satellite-base", "type": "raster", "source": "satellite-tiles" },
+    { "id": "arcgis-labels",  "type": "raster", "source": "labels-tiles", "paint": { "raster-opacity": 0.5 } },
+
+
+
+
+
+    {
+      "id": "paths",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "type": "line",
+      "filter": ["in", "class", "path", "track", "footway"],
+      "paint": { "line-color": "#ffcc00", "line-width": 1.5, "line-opacity": 0.9 }
+    },
+
+
+
+
+    {
+      "id": "roads",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "type": "line",
+      "filter": ["in", "class", "minor", "secondary", "primary", "trunk", "motorway"],
+      "paint": { "line-color": "#ffffff", "line-width": 2, "line-opacity": 0.8 }
+    },
+
+
+
+
+    {
+      "id": "poi-icons",
+      "source": "osm_data",
+      "source-layer": "poi",
+      "type": "symbol",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": ["get", "subclass"],
+        "icon-size": 0.8,
+        "text-field": ["get", "name"],
+        "text-font": ["Roboto-Regular"],
+        "text-size": 11,
+        "text-offset": [0, 1.2],
+        "text-anchor": "top",
+        "text-optional": true
+      },
+      "paint": {
+        "text-color": "#ffffff",
+        "text-halo-color": "#000000",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}

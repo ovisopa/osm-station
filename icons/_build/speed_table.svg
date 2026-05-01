@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M0 10L15 10L15 11L0 11L0 10ZM4.17 6.5L10.83 6.5C10.94 6.5 11.05 6.54 11.13 6.6L15 9.5L0 9.5L3.87 6.6C3.95 6.54 4.06 6.5 4.17 6.5Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 0 16 L 24 16 L 24 17.601562 L 0 17.601562 Z M 6.671875 10.398438 L 17.328125 10.398438 C 17.503906 10.398438 17.679688 10.464844 17.808594 10.558594 L 24 15.199219 L 0 15.199219 L 6.191406 10.558594 C 6.320312 10.464844 6.496094 10.398438 6.671875 10.398438 Z M 6.671875 10.398438 "/>
 </svg>

@@ -1,10 +1,61 @@
-<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0)">
-<path d="M6.99985 0C5.14337 0 3.36293 0.737482 2.05021 2.05021C0.737482 3.36293 0 5.14337 0 6.99985C0 8.85632 0.737482 10.6368 2.05021 11.9495C3.36293 13.2622 5.14337 13.9997 6.99985 13.9997C8.85632 13.9997 10.6368 13.2622 11.9495 11.9495C13.2622 10.6368 13.9997 8.85632 13.9997 6.99985C13.9997 5.14337 13.2622 3.36293 11.9495 2.05021C10.6368 0.737482 8.85632 0 6.99985 0V0ZM5.99987 2.99994H7.99983V5.99987H10.9998V7.99983H7.99983V10.9998H5.99987V7.99983H2.99994V5.99987H5.99987V2.99994Z" fill="#BF0000"/>
-</g>
-<defs>
-<clipPath id="clip0">
-<rect width="14" height="14" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="14"
+   height="14"
+   viewBox="0 0 14 14"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="hospital.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="28.785714"
+     inkscape:cx="6.1488834"
+     inkscape:cy="9.7096774"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <circle
+     style="opacity:1;fill:#f9f9f9;stroke:#f9f9f9;stroke-width:2;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+     id="path2"
+     cx="6.9131513"
+     cy="7.0173697"
+     r="5.9057074" />
+  <g
+     clip-path="url(#clip0)"
+     id="g1"
+     style="stroke:#ffffff;stroke-linecap:round;stroke-opacity:1;paint-order:stroke fill markers"
+     transform="matrix(0.82382134,0,0,0.82382134,1.1811414,1.3548386)">
+    <path
+       d="M 6.99985,0 C 5.14337,0 3.36293,0.737482 2.05021,2.05021 0.737482,3.36293 0,5.14337 0,6.99985 c 0,1.85647 0.737482,3.63695 2.05021,4.94965 1.31272,1.3127 3.09316,2.0502 4.94964,2.0502 1.85647,0 3.63695,-0.7375 4.94965,-2.0502 1.3127,-1.3127 2.0502,-3.09318 2.0502,-4.94965 0,-1.85648 -0.7375,-3.63692 -2.0502,-4.94964 C 10.6368,0.737482 8.85632,0 6.99985,0 Z M 5.99987,2.99994 H 7.99983 V 5.99987 H 10.9998 V 7.99983 H 7.99983 V 10.9998 H 5.99987 V 7.99983 H 2.99994 V 5.99987 h 2.99993 z"
+       fill="#bf0000"
+       id="path1"
+       style="stroke:#ffffff;stroke-linecap:round;stroke-opacity:1;paint-order:stroke fill markers" />
+  </g>
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0">
+      <rect
+         width="14"
+         height="14"
+         fill="white"
+         id="rect1" />
+    </clipPath>
+  </defs>
 </svg>

@@ -1,13 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="8"
-   height="8">
-  <path
-     style="fill:#fdfdfc;stroke:#525244;stroke-width:1"
-     d="m 7.5,4 a 3.5,3.5 0 0 1 -7,0 3.5,3.5 0 1 1 7,0 z" />
-  <path
-     style="fill:#525244;fill-opacity:1;stroke:none"
-     d="m 5.5,4 a 1.5,1.5 0 0 1 -3,0 1.5,1.5 0 1 1 3,0 z" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+<path fill-rule="nonzero" fill="rgb(99.215686%, 99.215686%, 98.823529%)" fill-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(32.156863%, 32.156863%, 26.666667%)" stroke-opacity="1" stroke-miterlimit="4" d="M 7.5 4 C 7.5 5.932813 5.932813 7.5 4 7.5 C 2.067188 7.5 0.5 5.932813 0.5 4 C 0.5 2.067188 2.067188 0.5 4 0.5 C 5.932813 0.5 7.5 2.067188 7.5 4 Z M 7.5 4 " transform="matrix(2.5, 0, 0, 2.5, 0, 0)"/>
+<path fill-rule="nonzero" fill="rgb(32.156863%, 32.156863%, 26.666667%)" fill-opacity="1" d="M 13.75 10 C 13.75 12.070312 12.070312 13.75 10 13.75 C 7.929688 13.75 6.25 12.070312 6.25 10 C 6.25 7.929688 7.929688 6.25 10 6.25 C 12.070312 6.25 13.75 7.929688 13.75 10 Z M 13.75 10 "/>
 </svg>

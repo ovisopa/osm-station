@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15">
-  <path d="M3 0.5L12 0.5L12 2.5L3 2.5z"/>
-  <path d="M3 8.5L12 8.5L12 10.5L3 10.5z"/>
-  <path d="M3 12.5L12 12.5L12 14.5L3 14.5z"/>
-  <path d="M3 4.5L12 4.5L12 6.5L3 6.5z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 4.800781 0.800781 L 19.199219 0.800781 L 19.199219 4 L 4.800781 4 Z M 4.800781 0.800781 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 4.800781 13.601562 L 19.199219 13.601562 L 19.199219 16.800781 L 4.800781 16.800781 Z M 4.800781 13.601562 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 4.800781 20 L 19.199219 20 L 19.199219 23.199219 L 4.800781 23.199219 Z M 4.800781 20 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 4.800781 7.199219 L 19.199219 7.199219 L 19.199219 10.398438 L 4.800781 10.398438 Z M 4.800781 7.199219 "/>
 </svg>

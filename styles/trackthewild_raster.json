@@ -1,0 +1,22 @@
+{
+  "version": 8,
+  "sources": {
+    "raster-tiles": {
+      "type": "raster",
+      "tiles": [
+        "https://assets.trackthewild.ro/raster/{z}/{x}/{y}.webp"
+      ],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 18,
+      "attribution": "© TrackTheWild | © OpenMapTiles | © OpenStreetMap contributors"
+    }
+  },
+  "layers": [
+    {
+      "id": "raster-layer",
+      "type": "raster",
+      "source": "raster-tiles"
+    }
+  ]
+}

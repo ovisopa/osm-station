@@ -1,10 +1,4 @@
-<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0)">
-<path d="M0 0V6H6V0H0Z" fill="#8461C4"/>
-</g>
-<defs>
-<clipPath id="clip0">
-<rect width="6" height="6" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+<rect x="-2" y="-2" width="24" height="24" fill="rgb(51.764706%, 38.039216%, 76.862745%)" fill-opacity="1"/>
 </svg>

@@ -1,30 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="4"
-   height="4"
-   id="svg1430">
-  <metadata
-     id="metadata1436">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs1434" />
-  <path
-     style="fill:#fdfdfc;stroke:#575749;stroke-width:0.5"
-     d="m 3.75,2 a 1.75,1.75 0 0 1 -3.5,0 1.75,1.75 0 1 1 3.5,0 z"
-     id="path1428" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+<path fill-rule="nonzero" fill="rgb(99.215686%, 99.215686%, 98.823529%)" fill-opacity="1" stroke-width="0.5" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(34.117647%, 34.117647%, 28.627451%)" stroke-opacity="1" stroke-miterlimit="4" d="M 3.75 2 C 3.75 2.966406 2.966406 3.75 2 3.75 C 1.033594 3.75 0.25 2.966406 0.25 2 C 0.25 1.033594 1.033594 0.25 2 0.25 C 2.966406 0.25 3.75 1.033594 3.75 2 Z M 3.75 2 " transform="matrix(5, 0, 0, 5, 0, 0)"/>
 </svg>

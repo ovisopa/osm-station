@@ -1,0 +1,658 @@
+{
+  "version": 8,
+  "name": "TrackTheWild Streets",
+  "glyphs": "https://assets.trackthewild.ro/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://assets.trackthewild.ro/sprites/sprite",
+  "sources": {
+    "osm_data": {
+      "type": "vector",
+      "url": "https://maps.trackthewild.ro/osm_data",
+      "attribution": "© TrackTheWild · © OpenStreetMap contributors"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": { "background-color": "hsl(54, 100%, 97%)" }
+    },
+
+    {
+      "id": "landuse-farmland",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["==", ["get", "class"], "farmland"],
+      "paint": {
+        "fill-color": "hsl(77, 77%, 92%)",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 13, 1]
+      }
+    },
+    {
+      "id": "landuse-meadow",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["any", ["==", ["get", "class"], "meadow"], ["==", ["get", "class"], "grass"]],
+      "paint": { "fill-color": "hsl(77, 60%, 88%)", "fill-opacity": 0.6 }
+    },
+    {
+      "id": "landuse-industrial",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["in", "class", "industrial"],
+      "paint": { "fill-color": "hsl(280, 15%, 90%)", "fill-opacity": 0.5 }
+    },
+    {
+      "id": "landuse-residential",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["==", ["get", "class"], "residential"],
+      "paint": { "fill-color": "hsl(30, 30%, 92%)", "fill-opacity": 0.5 }
+    },
+    {
+      "id": "landuse-grass",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["==", ["get", "class"], "grass"],
+      "paint": { "fill-color": "hsl(100, 60%, 85%)" }
+    },
+    {
+      "id": "landuse-heath",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["==", ["get", "class"], "heath"],
+      "paint": { "fill-color": "hsl(70, 40%, 80%)", "fill-opacity": 0.7 }
+    },
+    {
+      "id": "landcover-meadow-grass",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landcover",
+      "filter": ["==", ["get", "class"], "grass"],
+      "paint": { "fill-color": "hsl(77, 60%, 88%)", "fill-opacity": 0.5 }
+    },
+    {
+      "id": "landcover-farmland",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landcover",
+      "filter": ["==", ["get", "class"], "farmland"],
+      "paint": { "fill-color": "hsl(77, 77%, 92%)" }
+    },
+    {
+      "id": "forest",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landcover",
+      "filter": ["in", "class", "wood", "forest"],
+      "paint": {
+        "fill-color": "hsl(77, 55%, 76%)",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0.6, 14, 0.8]
+      }
+    },
+    {
+      "id": "landuse-scrub-heath",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["in", "class", "scrub", "heath", "grassland"],
+      "paint": { "fill-color": "hsl(77, 50%, 82%)", "fill-opacity": 0.5 }
+    },
+    {
+      "id": "landcover-sand",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landcover",
+      "filter": ["==", ["get", "class"], "sand"],
+      "paint": { "fill-color": "hsl(53, 68%, 89%)", "fill-opacity": 0.8 }
+    },
+    {
+      "id": "landcover-wetland",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landcover",
+      "filter": ["==", ["get", "class"], "wetland"],
+      "paint": { "fill-color": "hsl(150, 30%, 85%)", "fill-opacity": 0.5 }
+    },
+    {
+      "id": "landcover-rock",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landcover",
+      "filter": ["match", ["get", "class"], ["rock", "bare_rock", "scree"], true, false],
+      "paint": { "fill-color": "hsl(0, 0%, 88%)", "fill-opacity": 0.4 }
+    },
+
+    {
+      "id": "park-fill",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "park",
+      "filter": ["match", ["get", "class"], ["national_park", "nature_reserve", "natura_2000_site"], true, false],
+      "paint": { "fill-color": "hsl(100, 50%, 80%)", "fill-opacity": 0.15 }
+    },
+    {
+      "id": "park-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "park",
+      "filter": ["match", ["get", "class"], ["national_park", "nature_reserve", "natura_2000_site"], true, false],
+      "paint": { "line-color": "hsl(100, 40%, 50%)", "line-width": 1, "line-opacity": 0.5 }
+    },
+
+    {
+      "id": "sport-fields",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "landuse",
+      "filter": ["match", ["get", "class"], ["pitch", "stadium", "track", "sports_centre"], true, false],
+      "paint": { "fill-color": "hsl(120, 40%, 80%)", "fill-opacity": 0.5 }
+    },
+
+    {
+      "id": "waterway-river",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "waterway",
+      "filter": ["match", ["get", "class"], ["river"], true, false],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(204, 92%, 75%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 10, 1.0, 14, 3.0, 18, 10.0]
+      }
+    },
+    {
+      "id": "waterway-stream",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "waterway",
+      "filter": ["all", ["==", ["get", "class"], "stream"], ["!=", ["get", "intermittent"], 1]],
+      "paint": {
+        "line-color": "hsl(204, 92%, 75%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 11, 0.4, 15, 1.0]
+      }
+    },
+    {
+      "id": "waterway-intermittent",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "waterway",
+      "filter": ["all", ["any", ["==", ["get", "class"], "stream"], ["==", ["get", "class"], "river"]], ["==", ["get", "intermittent"], 1]],
+      "paint": { "line-color": "hsl(204, 70%, 75%)", "line-width": 0.8, "line-dasharray": [4, 2] }
+    },
+    {
+      "id": "water-fill",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "water",
+      "paint": { "fill-color": "hsl(204, 92%, 75%)" }
+    },
+    {
+      "id": "water-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "water",
+      "paint": {
+        "line-color": "hsl(204, 60%, 60%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.3, 15, 1]
+      }
+    },
+
+    {
+      "id": "buildings-fill",
+      "type": "fill",
+      "source": "osm_data",
+      "source-layer": "building",
+      "minzoom": 13,
+      "paint": {
+        "fill-color": "hsl(30, 6%, 73%)",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0.2, 15, 0.6],
+        "fill-outline-color": "hsl(35, 6%, 65%)"
+      }
+    },
+
+    {
+      "id": "roads-service",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "minzoom": 14,
+      "filter": ["==", ["get", "class"], "service"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 14, 0.8, 18, 3]
+      }
+    },
+
+    {
+      "id": "road-pedestrian",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "subclass"], "pedestrian"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 92%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 4]
+      }
+    },
+
+    {
+      "id": "paths-footways",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["match", ["get", "class"], ["path", "footway"], true, false],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 50%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 13, 0.5, 18, 1.2],
+        "line-dasharray": [3, 2]
+      }
+    },
+    {
+      "id": "tracks-unpaved",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "track"],
+      "minzoom": 11,
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 55%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 11, 0.5, 18, 1.2],
+        "line-dasharray": [4, 2]
+      }
+    },
+    {
+      "id": "cycleway",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["all", ["==", ["get", "class"], "path"], ["==", ["get", "subclass"], "cycleway"]],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(210, 50%, 60%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 13, 0.5, 18, 1.2],
+        "line-dasharray": [3, 2]
+      }
+    },
+
+    {
+      "id": "road-minor-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "minor"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(230, 5%, 67%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 12, 1.5, 18, 14]
+      }
+    },
+    {
+      "id": "road-minor-fill",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "minor"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 12, 0.8, 18, 12]
+      }
+    },
+
+    {
+      "id": "tertiary-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "tertiary"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(230, 5%, 67%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 10, 1.5, 18, 18]
+      }
+    },
+    {
+      "id": "tertiary-fill",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "tertiary"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 10, 0.8, 18, 16]
+      }
+    },
+
+    {
+      "id": "road-secondary-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "secondary"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(230, 5%, 67%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 8, 1.5, 18, 22]
+      }
+    },
+    {
+      "id": "road-secondary-fill",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "secondary"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(48, 100%, 87%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 8, 0.8, 18, 20]
+      }
+    },
+
+    {
+      "id": "road-primary-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["in", "class", "primary", "trunk"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(230, 5%, 60%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 6, 1.5, 18, 26]
+      }
+    },
+    {
+      "id": "road-primary-fill",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["in", "class", "primary", "trunk"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(48, 100%, 78%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 6, 0.8, 18, 24]
+      }
+    },
+
+    {
+      "id": "motorway-outline",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "motorway"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(30, 80%, 55%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 4, 2, 18, 30]
+      }
+    },
+    {
+      "id": "motorway-fill",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "motorway"],
+      "layout": { "line-cap": "round", "line-join": "round" },
+      "paint": {
+        "line-color": "hsl(35, 100%, 70%)",
+        "line-width": ["interpolate", ["exponential", 1.5], ["zoom"], 4, 1, 18, 28]
+      }
+    },
+
+    {
+      "id": "road-construction",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["match", ["get", "class"], ["motorway_construction", "trunk_construction", "primary_construction"], true, false],
+      "paint": {
+        "line-color": "hsl(48, 80%, 75%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 2, 18, 8],
+        "line-dasharray": [3, 2]
+      }
+    },
+
+    {
+      "id": "tunnel",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "brunnel"], "tunnel"],
+      "paint": {
+        "line-color": "hsl(0, 0%, 70%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 16, 4],
+        "line-dasharray": [3, 2]
+      }
+    },
+
+    {
+      "id": "railway-base",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "rail"],
+      "layout": { "line-join": "round", "line-cap": "round" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 55%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 15, 1.8]
+      }
+    },
+    {
+      "id": "railway-dash",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "rail"],
+      "layout": { "line-join": "round", "line-cap": "butt" },
+      "paint": {
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.6, 15, 1.2],
+        "line-dasharray": [8, 8]
+      }
+    },
+
+    {
+      "id": "aerialway-line",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "transportation",
+      "filter": ["==", ["get", "class"], "aerialway"],
+      "paint": { "line-color": "hsl(0, 0%, 30%)", "line-width": 1 }
+    },
+
+    {
+      "id": "country-border",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "boundary",
+      "filter": ["==", "admin_level", 2],
+      "paint": {
+        "line-color": "hsl(0, 0%, 50%)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 1, 10, 3]
+      }
+    },
+    {
+      "id": "admin-borders",
+      "type": "line",
+      "source": "osm_data",
+      "source-layer": "boundary",
+      "filter": ["in", "admin_level", 4, 6, 8],
+      "paint": {
+        "line-color": "hsl(0, 0%, 65%)",
+        "line-dasharray": [3, 2],
+        "line-width": ["match", ["get", "admin_level"], 4, 1.2, 6, 0.8, 0.5]
+      }
+    },
+
+    {
+      "id": "water-labels",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "water_name",
+      "minzoom": 10,
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-font": ["Roboto-Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 10, 18, 14],
+        "text-letter-spacing": 0.1,
+        "text-max-width": 5,
+        "symbol-placement": "point"
+      },
+      "paint": {
+        "text-color": "hsl(204, 60%, 40%)",
+        "text-halo-color": "rgba(255,255,255,0.9)",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "waterway-labels",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "waterway",
+      "filter": ["has", "name"],
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": ["get", "name"],
+        "text-font": ["Roboto-Regular"],
+        "text-size": 11,
+        "text-letter-spacing": 0.15,
+        "text-max-angle": 30
+      },
+      "paint": {
+        "text-color": "hsl(204, 60%, 40%)",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.5
+      }
+    },
+
+    {
+      "id": "road-labels",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "transportation_name",
+      "layout": {
+        "text-field": ["coalesce", ["get", "name"], ["get", "ref"]],
+        "symbol-placement": "line",
+        "text-font": ["Roboto-Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 10, 18, 14],
+        "text-rotation-alignment": "map",
+        "text-max-angle": 30
+      },
+      "paint": {
+        "text-color": "hsl(0, 0%, 25%)",
+        "text-halo-color": "hsl(0, 0%, 100%)",
+        "text-halo-width": 1.5
+      }
+    },
+	{
+	  "id": "place-labels",
+	  "type": "symbol",
+	  "source": "osm_data",
+	  "source-layer": "place",
+	  "layout": {
+		"text-font": ["Roboto-Regular"],
+		"text-field": ["get", "name"],
+		"text-anchor": "top", 
+		"text-offset": [0, 0.6], 
+		"text-size": [
+		  "interpolate",
+		  ["linear"],
+		  ["zoom"],
+		  6, ["match", ["get", "class"], "city", 12, "town", 9, 0],
+		  9, ["match", ["get", "class"], "city", 15, "town", 12, "village", 10, 0],
+		  12, ["match", ["get", "class"], "city", 20, "town", 14, "village", 12, "hamlet", 10, 8]
+		],
+		"text-transform": ["case", ["==", ["get", "class"], "city"], "uppercase", "none"],
+		"text-letter-spacing": ["case", ["==", ["get", "class"], "city"], 0.1, 0.02],
+		"text-max-width": 8
+	  },
+	  "paint": {
+		"text-color": "hsl(0, 0%, 20%)",
+		"text-halo-color": "hsl(0, 0%, 100%)",
+		"text-halo-width": 2
+	  }
+	},
+
+    {
+      "id": "park-labels",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "park",
+      "minzoom": 9,
+      "maxzoom": 15,
+      "filter": ["match", ["get", "class"], ["national_park", "nature_reserve", "natura_2000_site"], true, false],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-font": ["Roboto-Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 9, 10, 13, 13],
+        "symbol-placement": "point",
+        "text-transform": "uppercase",
+        "text-letter-spacing": 0.1,
+        "text-padding": 5
+      },
+      "paint": {
+        "text-color": "hsl(100, 40%, 35%)",
+        "text-halo-color": "rgba(255,255,255,0.9)",
+        "text-halo-width": 2,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 10, 1, 15, 0]
+      }
+    },
+
+    {
+      "id": "churches",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "poi",
+      "filter": ["==", ["get", "subclass"], "place_of_worship"],
+      "minzoom": 14,
+      "layout": {
+        "icon-image": "christian",
+        "icon-size": 0.8,
+        "text-field": ["step", ["zoom"], "", 15, ["get", "name"]],
+        "text-font": ["Roboto-Regular"],
+        "text-size": 10,
+        "text-offset": [0, 1],
+        "text-anchor": "top"
+      },
+      "paint": { "text-color": "hsl(0, 0%, 30%)", "text-halo-color": "#ffffff", "text-halo-width": 1.5 }
+    },
+    {
+      "id": "hospitals",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "poi",
+      "filter": ["==", ["get", "class"], "hospital"],
+      "minzoom": 13,
+      "layout": { "icon-image": "hospital", "icon-size": 0.9 }
+    },
+    {
+      "id": "transit-stations",
+      "type": "symbol",
+      "source": "osm_data",
+      "source-layer": "poi",
+      "filter": ["match", ["get", "class"], ["railway", "bus", "bus_stop", "station"], true, false],
+      "minzoom": 13,
+      "layout": {
+        "icon-image": ["match", ["get", "class"], "railway", "train", "station", "train", "bus", "bus", "bus_stop", "bus", "dot_blue"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.6, 15, 0.9],
+        "icon-allow-overlap": false,
+        "text-field": ["step", ["zoom"], "", 14, ["get", "name"]],
+        "text-font": ["Roboto-Regular"],
+        "text-size": 10,
+        "text-offset": [0, 1.3],
+        "text-anchor": "top"
+      },
+      "paint": { "text-color": "hsl(0, 0%, 20%)", "text-halo-color": "#ffffff", "text-halo-width": 1.5 }
+    }
+  ]
+}

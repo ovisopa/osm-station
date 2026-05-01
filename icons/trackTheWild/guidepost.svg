@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8mm"
+   height="7.9837599mm"
+   viewBox="0 0 8 7.98376"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   sodipodi:docname="guidepost.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="false"
+     inkscape:zoom="5.9962655"
+     inkscape:cx="-2.1680161"
+     inkscape:cy="32.937167"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-127.19755,-101.96088)"><path
+       style="fill:#000000;stroke:#ffffff;stroke-width:0.885679;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 129.79236,109.31683 c -0.0482,-0.0581 -0.0142,-0.20449 0.08,-0.34484 0.13229,-0.19691 0.44049,-0.36905 0.80491,-0.44953 l 0.0756,-0.0166 8.5e-4,-2.64127 8.4e-4,-2.64127 0.17042,-0.32937 c 0.1488,-0.28757 0.17913,-0.32934 0.23903,-0.32934 0.0599,0 0.0902,0.0416 0.23905,0.32934 l 0.17041,0.32937 8.5e-4,2.64127 8.5e-4,2.64127 0.0756,0.0166 c 0.43565,0.0963 0.7213,0.26997 0.84182,0.51185 0.0774,0.15546 0.0885,0.23981 0.0378,0.29043 -0.0248,0.0248 -0.36643,0.0329 -1.369,0.0329 -1.14975,0 -1.34079,-0.006 -1.36997,-0.0409 z m -1.71992,-3.34048 c -0.18593,-0.18345 -0.31143,-0.32888 -0.31143,-0.3609 0,-0.0313 0.12215,-0.17761 0.29348,-0.35149 l 0.29349,-0.29781 h 1.09259 1.0926 v 0.65874 0.65872 h -1.07464 -1.07465 z m 3.7233,-1.73754 v -0.64501 h 1.09148 1.09151 l 0.29459,0.2955 c 0.16202,0.16253 0.29458,0.31403 0.29458,0.33668 0,0.0227 -0.13916,0.17992 -0.3092,0.3495 l -0.30922,0.30833 h -1.07686 -1.07688 z"
+       id="path1" /></g></svg>

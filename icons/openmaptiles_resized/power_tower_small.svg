@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+<rect x="-2" y="-2" width="24" height="24" fill="rgb(40%, 40%, 40%)" fill-opacity="1"/>
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 10 13.332031 C 11.839844 13.332031 13.332031 11.839844 13.332031 10 C 13.332031 8.160156 11.839844 6.667969 10 6.667969 C 8.160156 6.667969 6.667969 8.160156 6.667969 10 C 6.667969 11.839844 8.160156 13.332031 10 13.332031 Z M 10 13.332031 "/>
+</svg>
